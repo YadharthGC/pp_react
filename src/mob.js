@@ -34,7 +34,7 @@ function Mob() {
 
   let fetch = async () => {
     try {
-      let get = await axios.get("http://localhost:3002/datas");
+      let get = await axios.get("https://yadharthpp.herokuapp.com/datas");
       setdatas([...get.data]);
     } catch (error) {
       console.log(error);
@@ -60,17 +60,20 @@ function Mob() {
               .then(async (url) => {
                 try {
                   console.log(url);
-                  let post = await axios.post("http://localhost:3002/post", {
-                    name,
-                    gmail,
-                    dob,
-                    mobile,
-                    job,
-                    url,
-                    citya,
-                    cityb,
-                    cityc,
-                  });
+                  let post = await axios.post(
+                    "https://yadharthpp.herokuapp.com/post",
+                    {
+                      name,
+                      gmail,
+                      dob,
+                      mobile,
+                      job,
+                      url,
+                      citya,
+                      cityb,
+                      cityc,
+                    }
+                  );
                   window.alert(post.data.message);
                 } catch (error) {
                   console.log("erorre");
@@ -262,7 +265,7 @@ function Mob() {
               <div className="final">
                 <Collapsible trigger={data.name}>
                   <div className="row" id="row">
-                    <div className="col-lg-9" style={{ textAlign: "center" }}>
+                    <div className="col-lg-12" style={{ textAlign: "center" }}>
                       <div>{data.gmail}</div>
                       <div>{data.mobile}</div>
                       <div>{data.dob}</div>
@@ -281,7 +284,7 @@ function Mob() {
                         </button>
                       </div>
                     </div>
-                    <div className="col-lg-3" style={{ textAlign: "center" }}>
+                    <div className="col-lg-12" style={{ textAlign: "center" }}>
                       <div>
                         <img src={data.url} />
                       </div>

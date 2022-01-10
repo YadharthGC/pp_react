@@ -32,7 +32,7 @@ function Page() {
 
   let fetch = async () => {
     try {
-      let get = await axios.get("http://localhost:3002/datas");
+      let get = await axios.get("https://yadharthpp.herokuapp.com/datas");
       setdatas([...get.data]);
     } catch (error) {
       console.log(error);
@@ -58,17 +58,20 @@ function Page() {
               .then(async (url) => {
                 try {
                   console.log(url);
-                  let post = await axios.post("http://localhost:3002/post", {
-                    name,
-                    gmail,
-                    dob,
-                    mobile,
-                    job,
-                    url,
-                    citya,
-                    cityb,
-                    cityc,
-                  });
+                  let post = await axios.post(
+                    "https://yadharthpp.herokuapp.com/post",
+                    {
+                      name,
+                      gmail,
+                      dob,
+                      mobile,
+                      job,
+                      url,
+                      citya,
+                      cityb,
+                      cityc,
+                    }
+                  );
                   window.alert(post.data.message);
                 } catch (error) {
                   console.log("erorre");
@@ -84,6 +87,14 @@ function Page() {
     } catch (error) {
       console.log("handlesubmit error");
       console.log("error");
+    }
+  };
+
+  let handledel = async (id) => {
+    try {
+      let del = await axios.post(`https://yadharthpp.herokuapp.com/del/${id}`);
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -284,13 +295,14 @@ function Page() {
                     <td className="keyans">{data.dob}</td>
                     <td className="keyans">{data.job}</td>
                     <td className="keyans">
-                      <button type="button" class="btn btn-warning">
-                        Edit
-                      </button>
+                      <button class="btn btn-warning">Edit</button>
+
                       <button
-                        type="button"
                         class="btn btn-danger"
                         style={{ marginLeft: "1%" }}
+                        onClick={() => {
+                          handledel(data._id);
+                        }}
                       >
                         Delete
                       </button>
