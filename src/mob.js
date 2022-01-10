@@ -92,6 +92,13 @@ function Mob() {
     }
   };
 
+  let handledel = async (id) => {
+    try {
+      let del = await axios.post(`https://yadharthpp.herokuapp.com/del/${id}`);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div>
       <div className="heading" id="head" style={{ textAlign: "center" }}>
@@ -279,6 +286,9 @@ function Mob() {
                           class="btn btn-danger"
                           style={{ marginLeft: "1%" }}
                           id="but"
+                          onClick={() => {
+                            handledel(data._id);
+                          }}
                         >
                           Delete
                         </button>
