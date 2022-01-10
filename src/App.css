@@ -1,38 +1,145 @@
-.App {
+.register,
+.table {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 2px; */
+  width: 100%;
+  padding: 1%;
+}
+#head {
+  text-decoration: underline;
+}
+.box {
+  border: solid 1px lightgray;
+  padding: 1%;
+}
+.namepic,
+.mobilegmail,
+.jobdob {
+  display: flex;
+}
+.name,
+.pic,
+.job,
+.dob,
+.mobile,
+.gmail {
+  flex: 0.5;
+  text-align: left;
+}
+#name,
+#pic,
+#job,
+#dob,
+#mobile,
+#gmail {
+  width: 80%;
+  border: solid 1.9px lightgray;
+  border-radius: 4px;
+  font-family: "El Messiri", sans-serif;
+}
+.heading {
+  font-family: "Cinzel", serif;
+}
+.location {
+  width: 40%;
+}
+.locations {
+  border: solid 1.9px lightgray;
+  border-radius: 4px;
+}
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+  padding: 1px !important;
+}
+label {
+  font-family: "El Messiri", sans-serif;
+}
+td {
+  border: solid 1.5px lightgray;
+  border-radius: 3px;
+  border-collapse: collapse;
+}
+.key {
+  font-family: "Cinzel", serif;
+}
+#keya,
+#keyb,
+#keyc,
+#keyd,
+#keye,
+#keyf {
+  width: 16.6666666667%;
+}
+.tabelbox,
+table {
+  width: 100%;
+}
+.keyans {
+  font-family: "El Messiri", sans-serif;
+  font-size: 18px;
+  padding-left: 1%;
+}
+thead {
+  color: rgb(92, 90, 90);
+  text-decoration: underline;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.submit {
+  text-align: center;
+  font-family: "Aclonica", sans-serif;
+  margin-top: 1%;
 }
+/* //////////////////// */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mobregister {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 1%;
 }
-
-.App-link {
-  color: #61dafb;
+.mobbox {
+  border: solid 1px lightgray;
+  padding: 1%;
+  width: 100%;
+  padding: 1px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#row {
+  font-family: "El Messiri", sans-serif;
+}
+img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+#but {
+  padding: 1px;
+  padding-left: 1px;
+}
+.Collapsible__trigger {
+  font-family: "Aclonica", sans-serif;
+  background-color: lightgray;
+  padding: 6px;
+  border-radius: 7px;
+  border: solid 1px black;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+.final {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.Collapsible__contentOuter {
+  height: auto;
+  transition: height 400ms linear 0s;
+  overflow: hidden;
+  border: 1px solid lightgray;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
