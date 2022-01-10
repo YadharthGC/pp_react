@@ -103,7 +103,7 @@ function Mob() {
     <div>
       <div className="heading" id="head" style={{ textAlign: "center" }}>
         <span style={{ fontSize: "25px" }}>Mobile-view</span>
-        <Link to="/">
+        <Link to="/" title="webview">
           <WebIcon />
         </Link>
       </div>

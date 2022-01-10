@@ -102,7 +102,7 @@ function Page() {
     <div>
       <div className="heading" id="head" style={{ textAlign: "center" }}>
         <span style={{ fontSize: "25px" }}>Web-view</span>
-        <Link to="/mobile">
+        <Link to="/mobile" title="mobileview">
           <MobileFriendlyTwoToneIcon />
         </Link>
       </div>
